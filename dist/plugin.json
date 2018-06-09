@@ -1,0 +1,24 @@
+{
+  "type": "panel",
+  "name": "Alertmanager",
+  "id": "camptocamp-alertmanager-panel",
+
+  "info": {
+    "description": "Prometheus Alertmanager panel for Grafana",
+    "author": {
+      "name": "Camptocamp",
+      "url": "https://camptocamp.com"
+    },
+    "keywords": ["prometheus", "alertmanager", "panel"],
+    "links": [
+      {"name": "Github", "url": "https://github.com/cryptobioz/camptocamp-alertmanager-panel"}
+    ],
+    "version": "0.0.1",
+    "updated": "2018-06-09"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "4.x.x",
+    "plugins": [ ]
+  }
+}

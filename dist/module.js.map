@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/module.js"],"names":["AlertmanagerPluginCtrl"],"mappings":";;;;;;;;AAAQA,4B,sBAAAA,sB;;;2BAGNA,sB","file":"module.js","sourcesContent":["import {AlertmanagerPluginCtrl} from './alertmanager_ctrl';\n\nexport {\n  AlertmanagerPluginCtrl as PanelCtrl\n};\n"]}

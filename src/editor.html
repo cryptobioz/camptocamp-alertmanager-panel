@@ -1,0 +1,53 @@
+<div class="editor-row">
+	<!--General section-->
+	<div class="section gf-form-group">
+		<h5 class="section-heading">Panel Options</h5>
+		<!--Threshold Preferences-->
+		<div class="gf-form">
+			<span class="gf-form-label width-9">
+				Display format
+			</span>
+			<div class="gf-form-select-wrapper max-width-12">
+				<select class="gf-form-input"
+						ng-init="ctrl.panel.displayFormat = (ctrl.panel.displayFormat ? ctrl.panel.displayFormat : ctrl.displayFormats[0])"
+						ng-model="ctrl.panel.displayFormat"
+						ng-options="t for t in ctrl.displayFormats"
+						ng-change="ctrl.onRender()"
+						required></select>
+			</div>
+		</div>
+		<div class="gf-form">
+			<label class="gf-form-label width-9">Colors</label>
+			<span class="gf-form-label">
+				<color-picker color="ctrl.panel.colors.crit" bs-tooltip="'Critical'" onChange="ctrl.onColorChange('crit')"></color-picker>
+			</span>
+			<span class="gf-form-label">
+				<color-picker color="ctrl.panel.colors.warn" bs-tooltip="'Warning'" onChange="ctrl.onColorChange('warn')"></color-picker>
+			</span>
+			<span class="gf-form-label">
+				<color-picker color="ctrl.panel.colors.ok" bs-tooltip="'OK'" onChange="ctrl.onColorChange('ok')"></color-picker>
+			</span>
+			<span class="gf-form-label">
+				<color-picker color="ctrl.panel.colors.disable" bs-tooltip="'Disabled'" onChange="ctrl.onColorChange('disable')"></color-picker>
+			</span>
+		</div>
+		<div class="gf-form">
+			<span class="gf-form-label width-9">
+				Font size
+			</span>
+			<input type="text" ng-model="ctrl.panel.fontSize" class="gf-form-input max-width-12" ng-change="ctrl.onRender()">
+		</div>
+	</div>
+
+
+	<!-- Custom section-->
+	<div class="section gf-form-group" ng-if="ctrl.panel.displayFormat == 'Custom message'">
+		<h5 class="section-heading">Custom message options</h5>
+		<div class="gf-form">
+			<span class="gf-form-label width-9">
+				Message
+			</span>
+			<input type="text" ng-model="ctrl.panel.customMessage" class="gf-form-input max-width-12" ng-change="ctrl.onRender()">
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,17 @@
+﻿<div class="status-panel">
+	<div ng-if="!ctrl.displayMessage">
+		<div style="text-align:center;font-size: {{ ctrl.panel.fontSize}}rem">
+			{{ ctrl.silences || 0 }} silences
+		</div>
+		<hr style="background-color:white;width:20%"></hr>
+		<div style="text-align:center;font-size: {{ ctrl.panel.fontSize }}rem">
+		    {{ ctrl.firing || 0 }} firing
+		</div>
+	</div>
+
+	<div ng-if="ctrl.displayMessage">
+		<div style="text-align: center;font-size: {{ ctrl.panel.fontSize }}rem">
+			{{ ctrl.message || "N/A" }}
+		</div>
+	</div>
+</div>
